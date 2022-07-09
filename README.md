@@ -17,4 +17,4 @@ A .png to .ico converter application written in WPF.
 
 ## Note:
 
-The `rt` releases (i.e. `win-64-rt`) have self contained instances of .NET, and require no additional work beyond merely downloading the application and running `IcoGenerator.exe`. However, this causes them to require more storage space. On the other hand, the regular releases (i.e. `win-64`) contain far fewer files and take up significantly less storage, but require the user's system to have .NET Core installed.
+The `rt` releases (i.e. `win-64-rt`) have self contained instances of .NET, and require no additional work beyond merely downloading the application and running `IcoGenerator.exe`. However, this causes them to require more storage space. On the other hand, the regular releases (i.e. `win-64`) contain far fewer files and take up significantly less storage, but require the user's system to have .NET installed.
