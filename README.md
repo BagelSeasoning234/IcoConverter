@@ -1,4 +1,4 @@
-# IcoGenerator
+# Ico Converter
 
 A .png to .ico converter application written in WPF.
 
