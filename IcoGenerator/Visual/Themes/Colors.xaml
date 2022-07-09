@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Purple -->
+    <Color x:Key="PurpleBackground">#FF231E32</Color>
+    <SolidColorBrush x:Key="PurpleBackgroundBrush" Color="{StaticResource PurpleBackground}"/>
+
+    <Color x:Key="PurpleTitleBar">#0F0A1E</Color>
+    <SolidColorBrush x:Key="PurpleTitleBrush" Color="{StaticResource PurpleTitleBar}"/>
+
+    <Color x:Key="LightPurple">#494256</Color>
+    <SolidColorBrush x:Key="LightPurpleBrush" Color="{StaticResource LightPurple}"/>
+
+    <Color x:Key="LigherPurple">#645F73</Color>
+    <SolidColorBrush x:Key="LigherPurpleBrush" Color="{StaticResource LigherPurple}"/>
+
+    <Color x:Key="VeryLightPurple">#9691A5</Color>
+    <SolidColorBrush x:Key="VeryLightPurpleBrush" Color="{StaticResource VeryLightPurple}"/>
+
+    <Color x:Key="PurpleTitleText">#C0ABFF</Color>
+    <SolidColorBrush x:Key="PurpleTitleTextBrush" Color="{StaticResource PurpleTitleText}"/>
+    
+    <!-- Gray -->
+    <Color x:Key="MediumGray">#969696</Color>
+    <SolidColorBrush x:Key="MediumGrayBrush" Color="{StaticResource MediumGray}"/>
+
+    <Color x:Key="LigherGray">#AFAFAF</Color>
+    <SolidColorBrush x:Key="LigherGrayBrush" Color="{StaticResource LigherGray}"/>
+
+    <Color x:Key="VeryLightGray">#E1E1E1</Color>
+    <SolidColorBrush x:Key="VeryLightGrayBrush" Color="{StaticResource VeryLightGray}"/>
+
+
+</ResourceDictionary>

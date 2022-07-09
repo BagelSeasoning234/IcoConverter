@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- A standard rounded label. -->
+    <Style TargetType="{x:Type Label}" 
+           x:Key="StandardLabel">
+        <Style.Setters>
+
+            <Setter Property="Foreground"
+                    Value="{StaticResource LigherGrayBrush}"/>
+
+            <Setter Property="BorderBrush"
+                    Value="{StaticResource MediumGrayBrush}"/>
+
+            <Setter Property="FontFamily"
+                    Value="{StaticResource UrbanistThin}"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+
+                        <!-- Border -->
+                        <Border x:Name="Border"
+                                BorderBrush="{StaticResource MediumGrayBrush}" 
+                                BorderThickness="1.5"
+                                Background="{StaticResource LightPurpleBrush}"
+                                CornerRadius="10"
+                                ClipToBounds="True"
+                                Padding="5">
+
+                            <!-- Prevents clipping outside of rounded corners. -->
+                            <Border.OpacityMask>
+                                <VisualBrush>
+                                    <VisualBrush.Visual>
+                                        <Border Background="Black"
+                                                SnapsToDevicePixels="True"
+                                                CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}"
+                                                Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
+                                                Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Border.OpacityMask>
+
+                            <!-- Content -->
+                            <ContentPresenter x:Name="Content"
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Left"
+                                     Margin="10 0 10 0"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                Value="True">
+                                <Setter Property="Foreground"
+                                Value="{StaticResource VeryLightGrayBrush}"/>
+                            </Trigger>
+
+                            <Trigger Property="IsEnabled"
+                                Value="False">
+                                <Setter Property="Foreground"
+                                Value="{StaticResource MediumGrayBrush}"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style.Setters>
+
+    </Style>
+
+</ResourceDictionary>

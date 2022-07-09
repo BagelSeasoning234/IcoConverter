@@ -1,0 +1,32 @@
+﻿<Application x:Class="IcoGenerator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:IcoGenerator"
+             xmlns:ViewModel="clr-namespace:IcoGenerator.Source.MVVM.ViewModel"
+             xmlns:View="clr-namespace:IcoGenerator.Source.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <!-- Resource Dictionaries -->
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="/Visual/Themes/Colors.xaml"/>
+                <ResourceDictionary Source="/Visual/Themes/Images.xaml"/>
+                <ResourceDictionary Source="/Visual/Themes/Fonts.xaml"/>
+                <ResourceDictionary Source="/Visual/Themes/Buttons.xaml"/>
+                <ResourceDictionary Source="/Visual/Themes/Labels.xaml"/>
+                <ResourceDictionary Source="/Visual/Themes/ComboBoxes.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Views -->
+            <DataTemplate DataType="{x:Type ViewModel:MainViewModel}">
+                <View:MainPage/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

@@ -1,0 +1,111 @@
+﻿<Window x:Class="IcoGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IcoGenerator"
+        xmlns:ViewModel="clr-namespace:IcoGenerator.Source.MVVM.ViewModel" 
+        xmlns:CustomControls="clr-namespace:IcoGenerator.Visual.CustomControls" 
+        d:DataContext="{d:DesignInstance Type=ViewModel:WindowViewModel}"
+        mc:Ignorable="d"
+        Title="Ico Converter" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="32"
+                      ResizeBorderThickness="{Binding ResizeBorderThickness}"/>
+    </WindowChrome.WindowChrome>
+
+    <Window.Background>
+        <SolidColorBrush Opacity="0"/>
+    </Window.Background>
+
+    <!-- Outer border with a drop shadow. -->
+    <Border Padding="{Binding OuterMarginSizeThickness}"
+            CornerRadius="10"
+            Background="#969696">
+
+        <!-- Main window outline -->
+        <Grid>
+
+            <!-- Opacity mask for rounded corners. -->
+            <Border x:Name="Container"
+                    Background="#FF231E32"
+                    CornerRadius="10">
+            </Border>
+            
+            <Grid>
+
+                <Grid.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=Container}"/>
+                </Grid.OpacityMask>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{Binding TitleHeight, Mode=Default}"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Title Bar -->
+            <Grid VerticalAlignment="Top" 
+                  HorizontalAlignment="Stretch"
+                  Background="#0F0A1E"
+                  Height="{Binding TitleHeight, Mode=TwoWay}"
+                  Grid.Row="0">
+
+                <Grid.ColumnDefinitions>
+                    <!-- Logo -->
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <!-- Buttons -->
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Logo -->
+                <Button Grid.Column="0" 
+                        Command="{Binding MenuCommand}"
+                        Style="{StaticResource LogoButton}">
+                    <Image Source="/Resources/Images/Logo.png"/>
+                </Button>
+
+                <!-- Minimize -->
+                    <CustomControls:WindowControlButton
+                        Grid.Column="2" 
+                        Command="{Binding MinimizeCommand}"
+                        PrimaryImage="{StaticResource MinimizeIcon}"
+                        HoveredImage="{StaticResource MinimizeIconHovered}"
+                        Style="{StaticResource Minimize Control Button}">
+                    </CustomControls:WindowControlButton>
+                
+                <!-- Maximize -->
+                    <CustomControls:WindowControlButton 
+                        Grid.Column="3" 
+                        Command="{Binding MaximizeCommand}"
+                        PrimaryImage="{StaticResource MaximizeIcon}"
+                        HoveredImage="{StaticResource MaximizeIconHovered}"
+                        Style="{StaticResource Maximize Control Button}">
+                    </CustomControls:WindowControlButton>
+                
+                <!-- Close -->
+                <CustomControls:WindowControlButton 
+                    Grid.Column="4" 
+                    Command="{Binding CloseCommand}"
+                    Style="{StaticResource Close Control Button}">
+                    
+                </CustomControls:WindowControlButton>
+
+            </Grid>
+            
+            <!-- The current view (Actual content). -->
+            <ContentControl Grid.Row="1"
+                   Content="{Binding CurrentView, Mode=TwoWay}"/>
+                
+        </Grid>
+    </Grid>
+        
+    </Border>
+    
+</Window>

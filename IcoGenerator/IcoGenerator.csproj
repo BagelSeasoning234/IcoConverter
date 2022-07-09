@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\Images\Ico Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-Black.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-BlackItalic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-Bold.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-BoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-ExtraBold.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-ExtraBoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-ExtraLight.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-ExtraLightItalic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-Italic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-Light.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-LightItalic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-Medium.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-MediumItalic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-Regular.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-SemiBold.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-SemiBoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-Thin.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\static\Urbanist-ThinItalic.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\Urbanist-Italic-VariableFont_wght.ttf" />
+    <None Remove="Resources\Fonts\Urbanist\Urbanist-VariableFont_wght.ttf" />
+    <None Remove="Resources\Images\Buttons\Close Icon Hovered.png" />
+    <None Remove="Resources\Images\Buttons\Close Icon.png" />
+    <None Remove="Resources\Images\Buttons\Maximize Icon Hovered.png" />
+    <None Remove="Resources\Images\Buttons\Maximize Icon.png" />
+    <None Remove="Resources\Images\Buttons\Minimize Icon Hovered.png" />
+    <None Remove="Resources\Images\Buttons\Minimize Icon.png" />
+    <None Remove="Resources\Images\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-Black.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-BlackItalic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-BoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-Italic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-Light.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-LightItalic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-MediumItalic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-Thin.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\static\Urbanist-ThinItalic.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\Urbanist-Italic-VariableFont_wght.ttf" />
+    <Resource Include="Resources\Fonts\Urbanist\Urbanist-VariableFont_wght.ttf" />
+    <Resource Include="Resources\Images\Buttons\Close Icon Hovered.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Buttons\Close Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Buttons\Maximize Icon Hovered.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Buttons\Maximize Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Buttons\Minimize Icon Hovered.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Buttons\Minimize Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
