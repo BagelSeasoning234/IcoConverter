@@ -14,7 +14,6 @@ A .png to .ico converter application written in WPF.
 ## Supported Platforms
 
 - Windows
-- Linux
 
 ## Note:
 
